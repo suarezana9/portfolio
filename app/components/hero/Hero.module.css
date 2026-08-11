@@ -94,24 +94,24 @@
   overflow: hidden;
 }
 
+@keyframes wordUp {
+  from { transform: translateY(110%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
 .word {
   display: inline-block;
-  transform: translateY(110%);
-  opacity: 0;
-  transition:
-    transform 900ms var(--ease-expo),
-    opacity   600ms ease;
+  animation: wordUp 900ms var(--ease-expo) both;
 }
 
 .accentLine .word {
   color: var(--accent);
-  transition-delay: 120ms;
-}
-
-/* Loaded state triggers the animation */
-.hero[data-loaded='true'] .word {
-  transform: translateY(0);
-  opacity: 1;
+  animation-delay: 120ms;
 }
 
 /* Bottom bar */
@@ -122,16 +122,7 @@
   align-items: end;
   padding-top: var(--s4);
   border-top: 1px solid var(--dark-border);
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity  700ms ease         600ms,
-    transform 700ms var(--ease-expo) 600ms;
-}
-
-.hero[data-loaded='true'] .bottom {
-  opacity: 1;
-  transform: none;
+  animation: fadeUp 700ms var(--ease-expo) 600ms both;
 }
 
 .description {
@@ -156,16 +147,11 @@
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .word {
-    transform: none;
-    opacity: 1;
-    transition: none;
-  }
-
+  .word,
   .bottom {
+    animation: none;
     opacity: 1;
     transform: none;
-    transition: none;
   }
 }
 

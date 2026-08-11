@@ -1,26 +1,14 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import styles from './Hero.module.css'
 
 export default function Hero() {
-  const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    const id = requestAnimationFrame(() => setLoaded(true))
-    return () => cancelAnimationFrame(id)
-  }, [])
-
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <section
-      id="hero"
-      className={styles.hero}
-      data-loaded={loaded ? 'true' : 'false'}
-    >
+    <section id="hero" className={styles.hero}>
       <div className={styles.availability}>
         <span className={styles.pulseDot} />
         disponible para nuevos proyectos
