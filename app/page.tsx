@@ -1,9 +1,14 @@
+import Nav  from './components/nav/Nav'
+import Hero from './components/hero/Hero'
+
 export default function Home() {
   return (
-    <main>
-      <p style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-        Etapa 1 ✓ — tokens y estructura listos.
-      </p>
-    </main>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        {/* próximas secciones — etapas 3 y 4 */}
+      </main>
+    </>
   )
 }
