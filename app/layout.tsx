@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { LanguageProvider } from './lib/i18n/LanguageContext'
+import Cursor from './components/cursor/Cursor'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -21,7 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>
+          <Cursor />
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   )
 }

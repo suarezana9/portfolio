@@ -1,0 +1,180 @@
+.section {
+  background: var(--dark-bg);
+  padding: var(--s7) var(--s5);
+  border-top: 1px solid var(--dark-border);
+}
+
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* ── Heading ─────────────────────────────── */
+.heading {
+  margin-bottom: var(--s6);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: var(--s3);
+  opacity: 0;
+  transform: translateX(-14px);
+  transition: opacity 500ms var(--ease-expo), transform 500ms var(--ease-expo);
+}
+
+.kicker::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--warm);
+  transition: width 600ms var(--ease-expo) 100ms;
+}
+
+[data-revealed='true'] .kicker { opacity: 1; transform: none; }
+[data-revealed='true'] .kicker::before { width: 24px; }
+
+.title {
+  font-family: var(--serif);
+  font-weight: normal;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--dark-text);
+}
+
+.titleLine {
+  display: block;
+  overflow: hidden;
+}
+
+.titleWord {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(108%);
+  transition: opacity 800ms var(--ease-expo), transform 800ms var(--ease-expo);
+}
+
+.titleWordAccent {
+  color: var(--dark-muted);
+  transition-delay: 100ms;
+}
+
+[data-revealed='true'] .titleWord { opacity: 1; transform: none; }
+[data-revealed='true'] .titleWordAccent { transition-delay: 120ms; }
+
+/* ── Grid ────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s4);
+}
+
+/* ── Card ────────────────────────────────── */
+.card {
+  position: relative;
+  padding: var(--s5);
+  background: var(--dark-bg-2);
+  border: 1px solid var(--dark-border);
+  border-radius: 4px;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 650ms var(--ease-expo) var(--card-delay, 0ms),
+    transform 650ms var(--ease-expo) var(--card-delay, 0ms),
+    border-color 250ms,
+    background 250ms;
+}
+
+[data-revealed='true'] .card { opacity: 1; transform: none; }
+
+.card:hover {
+  border-color: rgba(243, 240, 232, 0.18);
+  background: color-mix(in srgb, var(--dark-bg-2) 80%, var(--dark-bg));
+}
+
+/* ── Icon ────────────────────────────────── */
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  background: rgba(220, 180, 130, 0.10);
+  border: 1px solid rgba(220, 180, 130, 0.18);
+  color: var(--warm);
+  margin-bottom: var(--s3);
+  transition: background 250ms, border-color 250ms;
+}
+
+.card:hover .cardIcon {
+  background: rgba(220, 180, 130, 0.16);
+  border-color: rgba(220, 180, 130, 0.32);
+}
+
+/* ── Title ───────────────────────────────── */
+.cardTitle {
+  font-family: var(--sans);
+  font-size: var(--t-md);
+  font-weight: 700;
+  color: var(--dark-text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--s3);
+  padding-bottom: var(--s2);
+  border-bottom: 2px solid var(--warm);
+  display: inline-block;
+}
+
+/* ── Items ───────────────────────────────── */
+.items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: var(--s3);
+}
+
+.item {
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--dark-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 200ms;
+}
+
+.item::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--warm);
+  opacity: 0.5;
+  flex-shrink: 0;
+  transition: opacity 200ms;
+}
+
+.card:hover .item { color: rgba(243, 240, 232, 0.75); }
+.card:hover .item::before { opacity: 1; }
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .section { padding: var(--s6) var(--s3); }
+  .grid { grid-template-columns: 1fr; }
+}

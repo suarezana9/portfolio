@@ -1,5 +1,12 @@
-import Nav  from './components/nav/Nav'
-import Hero from './components/hero/Hero'
+import Nav         from './components/nav/Nav'
+import Hero        from './components/hero/Hero'
+import Expertise   from './components/expertise/Expertise'
+import Sistemas    from './components/sistemas/Sistemas'
+import Proyectos   from './components/proyectos/Proyectos'
+import Stack       from './components/stack/Stack'
+import Experiencia from './components/experiencia/Experiencia'
+import Contacto    from './components/contacto/Contacto'
+import Footer      from './components/footer/Footer'
 
 export default function Home() {
   return (
@@ -7,8 +14,14 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        {/* próximas secciones — etapas 3 y 4 */}
+        <Expertise />
+        <Sistemas />
+        <Proyectos />
+        <Stack />
+        <Experiencia />
+        <Contacto />
       </main>
+      <Footer />
     </>
   )
 }

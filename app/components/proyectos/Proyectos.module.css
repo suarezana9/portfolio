@@ -1,0 +1,374 @@
+.section {
+  background: var(--dark-bg);
+  padding: var(--s7) var(--s5);
+  border-top: 1px solid var(--dark-border);
+}
+
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* ── Heading ─────────────────────────────── */
+.heading { margin-bottom: var(--s6); }
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: var(--s3);
+  opacity: 0;
+  transform: translateX(-14px);
+  transition: opacity 500ms var(--ease-expo), transform 500ms var(--ease-expo);
+}
+
+.kicker::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--warm);
+  transition: width 600ms var(--ease-expo) 100ms;
+}
+
+[data-revealed='true'] .kicker { opacity: 1; transform: none; }
+[data-revealed='true'] .kicker::before { width: 24px; }
+
+.title {
+  font-family: var(--serif);
+  font-weight: normal;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--dark-text);
+}
+
+.titleLine { display: block; overflow: hidden; }
+
+.titleWord {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(108%);
+  transition: opacity 800ms var(--ease-expo), transform 800ms var(--ease-expo);
+}
+
+.titleWordMuted {
+  color: var(--dark-muted);
+  transition-delay: 100ms;
+}
+
+[data-revealed='true'] .titleWord { opacity: 1; transform: none; }
+
+/* ── Project card ────────────────────────── */
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s6);
+  align-items: center;
+  padding: var(--s6) 0;
+  border-top: 1px solid var(--dark-border);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 750ms var(--ease-expo), transform 750ms var(--ease-expo);
+}
+
+.card:last-child { border-bottom: 1px solid var(--dark-border); }
+
+[data-revealed='true'].card { opacity: 1; transform: none; }
+
+.cardReverse { direction: rtl; }
+.cardReverse > * { direction: ltr; }
+
+/* ── Card body ───────────────────────────── */
+.cardBody { display: flex; flex-direction: column; gap: var(--s3); }
+
+.cardNum {
+  font-family: var(--serif);
+  font-size: var(--t-xs);
+  letter-spacing: 0.16em;
+  color: var(--dark-muted);
+  font-weight: 400;
+}
+
+.cardName {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: normal;
+  letter-spacing: -0.03em;
+  color: var(--dark-text);
+  line-height: 1.05;
+}
+
+.cardDesc {
+  font-size: var(--t-sm);
+  color: var(--dark-muted);
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--s1);
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(176, 185, 168, 0.75);
+  background: rgba(176, 185, 168, 0.08);
+  padding: 4px 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(176, 185, 168, 0.13);
+}
+
+/* ── Mockup area ─────────────────────────── */
+.cardMockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-bg-2);
+  border: 1px solid var(--dark-border);
+  border-radius: 8px;
+  padding: var(--s5) var(--s4);
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 300ms;
+}
+
+.card:hover .cardMockup { border-color: rgba(176, 185, 168, 0.22); }
+
+/* ── Phone mockup (Wallit) ───────────────── */
+.phone {
+  width: 180px;
+  background: #0d111c;
+  border-radius: 28px;
+  border: 1.5px solid rgba(255,255,255,0.08);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 4px 16px rgba(0,0,0,0.4);
+  overflow: hidden;
+  position: relative;
+}
+
+.phoneNotch {
+  width: 60px;
+  height: 10px;
+  background: #0d111c;
+  border: 1.5px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  margin: 10px auto 0;
+}
+
+.phoneScreen { padding: 16px 14px 20px; }
+
+.phoneHeader { margin-bottom: 14px; }
+
+.phoneLabel {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 4px;
+  font-family: var(--sans);
+}
+
+.phoneBalance {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.03em;
+  font-family: var(--sans);
+}
+
+.phoneChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 48px;
+  margin-bottom: 16px;
+  padding: 0 2px;
+}
+
+.bar {
+  flex: 1;
+  background: rgba(176, 185, 168, 0.2);
+  border-radius: 3px 3px 0 0;
+  transition: background 200ms;
+}
+
+.barActive { background: var(--warm); }
+
+.phoneTxList { display: flex; flex-direction: column; gap: 10px; }
+
+.phoneTx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.phoneTxLabel {
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--sans);
+}
+
+.phoneTxNeg {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(220, 100, 100, 0.85);
+  font-family: var(--sans);
+}
+
+.phoneTxPos {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(176, 185, 168, 0.9);
+  font-family: var(--sans);
+}
+
+/* ── Browser mockup (Stock) ──────────────── */
+.browser {
+  width: 320px;
+  background: #111509;
+  border-radius: 10px;
+  border: 1px solid rgba(176,185,168,0.1);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+.browserBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.browserDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: block;
+}
+
+.browserUrl {
+  font-size: 9px;
+  color: rgba(255,255,255,0.25);
+  font-family: var(--mono);
+  margin-left: 6px;
+  letter-spacing: 0.04em;
+}
+
+.browserScreen { padding: 14px 12px; }
+
+.dashMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.metric {
+  background: rgba(176,185,168,0.06);
+  border: 1px solid rgba(176,185,168,0.08);
+  border-radius: 5px;
+  padding: 8px 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metricAlert {
+  background: rgba(220, 100, 80, 0.08);
+  border-color: rgba(220, 100, 80, 0.2);
+}
+
+.metricLabel {
+  font-size: 8px;
+  color: rgba(255,255,255,0.3);
+  font-family: var(--sans);
+  letter-spacing: 0.04em;
+}
+
+.metricValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  font-family: var(--sans);
+  letter-spacing: -0.02em;
+}
+
+.metricAlert .metricValue { color: rgba(220,100,80,0.9); }
+
+.metricUnit {
+  font-size: 7px;
+  color: rgba(255,255,255,0.2);
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dashChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 44px;
+  margin-bottom: 10px;
+}
+
+.dashBar {
+  flex: 1;
+  background: rgba(176, 185, 168, 0.18);
+  border-radius: 2px 2px 0 0;
+}
+
+.dashBar:last-child { background: var(--sage, #b0b9a8); opacity: 0.7; }
+
+.dashStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.statusDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--sage, #b0b9a8);
+  flex-shrink: 0;
+}
+
+.statusText {
+  font-size: 8px;
+  color: rgba(255,255,255,0.25);
+  font-family: var(--mono);
+  letter-spacing: 0.02em;
+}
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 900px) {
+  .card, .cardReverse { grid-template-columns: 1fr; direction: ltr; }
+  .cardMockup { min-height: 260px; }
+  .browser { width: 100%; max-width: 320px; }
+}
+
+@media (max-width: 600px) {
+  .section { padding: var(--s6) var(--s3); }
+  .phone { width: 160px; }
+}

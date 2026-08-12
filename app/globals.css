@@ -45,13 +45,14 @@
   --accent-text: #fff;
   --warm:        #dcb482;
 
-  /* Always-dark zones (hero, footer) */
+  /* Always-dark palette (full site) */
   --dark-bg:      #181c17;
-  --dark-bg-2:    #212619;
+  --dark-bg-2:    #1e2219;
   --dark-surface: #20261e;
   --dark-text:    #f3f0e8;
   --dark-muted:   rgba(243, 240, 232, 0.44);
   --dark-border:  rgba(243, 240, 232, 0.10);
+  --sage:         #b0b9a8;
 
   /* Layout */
   --max:      1200px;
@@ -106,13 +107,18 @@ html {
 
 body {
   font-family: var(--sans);
-  background: var(--bg);
-  color: var(--text);
+  background: var(--dark-bg);
+  color: var(--dark-text);
   font-size: 17px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  a, button, [role='button'] { cursor: none; }
 }
 
 a {

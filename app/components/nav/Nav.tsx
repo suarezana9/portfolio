@@ -1,17 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useLang } from '../../lib/i18n/LanguageContext'
 import styles from './Nav.module.css'
-
-const links = [
-  { label: 'Qué hago',       href: '#sistemas'  },
-  { label: 'Proyectos',      href: '#proyectos' },
-  { label: 'Para tu negocio', href: '#clientes'  },
-  { label: 'Proceso',        href: '#proceso'   },
-]
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const { lang, toggle, t } = useLang()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -31,19 +26,38 @@ export default function Nav() {
         </button>
 
         <ul className={styles.links}>
-          {links.map(({ label, href }) => (
+          {t.nav.links.map(({ label, href }) => (
             <li key={href}>
               <button className={styles.link} onClick={() => scrollTo(href)}>
                 {label}
               </button>
             </li>
           ))}
-          <li>
-            <button className={styles.cta} onClick={() => scrollTo('#contacto')}>
-              Hablemos
-            </button>
-          </li>
         </ul>
+
+        <div className={styles.right}>
+          <div className={styles.langToggle} role="group" aria-label="Idioma / Language">
+            <button
+              className={`${styles.langOpt} ${lang === 'es' ? styles.langOptActive : ''}`}
+              onClick={() => lang !== 'es' && toggle()}
+              aria-pressed={lang === 'es'}
+            >
+              ES
+            </button>
+            <span className={styles.langDivider} aria-hidden="true" />
+            <button
+              className={`${styles.langOpt} ${lang === 'en' ? styles.langOptActive : ''}`}
+              onClick={() => lang !== 'en' && toggle()}
+              aria-pressed={lang === 'en'}
+            >
+              EN
+            </button>
+          </div>
+
+          <button className={styles.cta} onClick={() => scrollTo('#contacto')}>
+            {t.nav.cta}
+          </button>
+        </div>
       </div>
     </nav>
   )
