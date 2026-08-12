@@ -4,14 +4,13 @@ import Cursor from './components/cursor/Cursor'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ana — Desarrollo de sistemas a medida',
+  title: 'Ana Suárez — Ingeniería de Sistemas a medida',
   description:
-    'Desarrolladora con 8 años de experiencia en todas las etapas de un sistema. Construyo lo que tu negocio necesita, de la arquitectura al despliegue.',
-  keywords: ['desarrollo de sistemas', 'freelance', 'Argentina', 'TypeScript', 'Angular', 'React'],
+    'Ingeniera de sistemas con 8 años de experiencia. Diseño y desarrollo sistemas digitales que automatizan, ordenan y hacen crecer empresas reales.',
+  keywords: ['ingeniería de sistemas', 'desarrollo de software', 'freelance', 'sistemas a medida', 'TypeScript', 'Angular', 'React', 'mobile'],
   openGraph: {
-    title: 'Ana — Desarrollo de sistemas a medida',
-    description: 'Del problema al sistema que funciona.',
-    locale: 'es_AR',
+    title: 'Ana Suárez — Ingeniería de Sistemas',
+    description: 'Sistemas digitales que hacen crecer negocios reales.',
     type: 'website',
   },
 }
@@ -22,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body>
         <LanguageProvider>
           <Cursor />

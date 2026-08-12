@@ -21,8 +21,14 @@ export default function Cursor() {
       if (dotRef.current) {
         dotRef.current.style.transform = `translate3d(${mx - 4}px, ${my - 4}px, 0)`
       }
-      rx += (mx - rx) * 0.11
-      ry += (my - ry) * 0.11
+      rx += (mx - rx) * 0.5
+      ry += (my - ry) * 0.5
+      const dist = Math.hypot(mx - rx, my - ry)
+      if (dist > 18) {
+        const clamp = 18 / dist
+        rx = mx - (mx - rx) * clamp
+        ry = my - (my - ry) * clamp
+      }
       if (ringRef.current) {
         ringRef.current.style.transform = `translate3d(${rx - 18}px, ${ry - 18}px, 0)`
       }

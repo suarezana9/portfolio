@@ -6,7 +6,7 @@ import { translations, Lang } from './translations'
 interface LangCtxValue {
   lang: Lang
   toggle: () => void
-  t: typeof translations['es']
+  t: typeof translations[Lang]
 }
 
 const LangCtx = createContext<LangCtxValue>({
@@ -22,6 +22,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const saved = localStorage.getItem('lang') as Lang | null
     if (saved === 'es' || saved === 'en') setLang(saved)
   }, [])
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
 
   const toggle = () =>
     setLang(prev => {

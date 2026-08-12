@@ -8,7 +8,7 @@ import styles from './Contacto.module.css'
 type Status = 'idle' | 'sending' | 'success' | 'error'
 
 export default function Contacto() {
-  const { t }       = useLang()
+  const { lang, t }   = useLang()
   const headingRef  = useReveal<HTMLDivElement>()
   const formRef     = useReveal<HTMLDivElement>(0.1)
   const [status, setStatus] = useState<Status>('idle')
@@ -87,7 +87,7 @@ export default function Contacto() {
                     type="email"
                     required
                     className={styles.input}
-                    placeholder="maria@empresa.com"
+                    placeholder="maria@ejemplo.com"
                   />
                 </div>
               </div>
@@ -102,7 +102,11 @@ export default function Contacto() {
                   required
                   rows={5}
                   className={styles.textarea}
-                  placeholder="Necesito un sistema para gestionar el stock de mis 3 sucursales…"
+                  placeholder={
+                    lang === 'es'
+                      ? 'Hola Ana, me gustaría conversar sobre una oportunidad o propuesta técnica…'
+                      : 'Hi Ana, I would like to discuss a project or technical opportunity…'
+                  }
                 />
               </div>
 

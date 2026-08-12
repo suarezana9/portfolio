@@ -42,8 +42,8 @@ export default function Hero() {
         </h1>
         <p className={styles.subtitle}>
           {lang === 'es'
-            ? 'INGENIERA DE SISTEMAS · REMOTO'
-            : 'SYSTEMS ENGINEER · REMOTE'}
+            ? 'INGENIERÍA DE SOFTWARE'
+            : 'SOFTWARE ENGINEERING'}
         </p>
       </div>
 

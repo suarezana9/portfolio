@@ -10,7 +10,7 @@ export default function Experiencia() {
   const timelineRef = useReveal<HTMLOListElement>(0.08)
 
   return (
-    <section id="proceso" className={styles.section}>
+    <section id="experiencia" className={styles.section}>
       <div className={styles.inner}>
 
         <div ref={headingRef} className={styles.heading}>

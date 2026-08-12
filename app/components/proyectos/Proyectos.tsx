@@ -41,26 +41,26 @@ function WallitMockup() {
   )
 }
 
-function StockMockup() {
+function IoTMockup() {
   return (
     <div className={styles.browser}>
       <div className={styles.browserBar}>
         <span className={styles.browserDot} />
         <span className={styles.browserDot} />
         <span className={styles.browserDot} />
-        <span className={styles.browserUrl}>dashboard.stock.app</span>
+        <span className={styles.browserUrl}>dashboard.iot-platform.io</span>
       </div>
       <div className={styles.browserScreen}>
         <div className={styles.dashMetrics}>
           {[
-            { label: 'Suc. Norte', value: '847', ok: true  },
-            { label: 'Suc. Sur',   value: '312', ok: true  },
-            { label: 'Suc. Centro',value: '!29', ok: false },
+            { label: 'Dispositivos', value: '1.240', ok: true  },
+            { label: 'Telemetría',   value: '99.8%', ok: true  },
+            { label: 'Alertas',      value: '!02',  ok: false },
           ].map(m => (
             <div key={m.label} className={`${styles.metric} ${m.ok ? '' : styles.metricAlert}`}>
               <span className={styles.metricLabel}>{m.label}</span>
               <span className={styles.metricValue}>{m.value}</span>
-              <span className={styles.metricUnit}>items</span>
+              <span className={styles.metricUnit}>activos</span>
             </div>
           ))}
         </div>
@@ -71,7 +71,7 @@ function StockMockup() {
         </div>
         <div className={styles.dashStatus}>
           <span className={styles.statusDot} />
-          <span className={styles.statusText}>3 sensores activos · última sync hace 2s</span>
+          <span className={styles.statusText}>Plataforma Multi-tenant · Sensores en tiempo real</span>
         </div>
       </div>
     </div>
@@ -121,7 +121,7 @@ export default function Proyectos() {
           </div>
         </article>
 
-        {/* Card 2 — Stock — reversed layout */}
+        {/* Card 2 — Multi-tenant IoT Platform — reversed layout */}
         <article ref={card2Ref} className={`${styles.card} ${styles.cardReverse}`}>
           <div className={styles.cardBody}>
             <span className={styles.cardNum}>02</span>
@@ -134,7 +134,7 @@ export default function Proyectos() {
             </ul>
           </div>
           <div className={styles.cardMockup}>
-            <StockMockup />
+            <IoTMockup />
           </div>
         </article>
 

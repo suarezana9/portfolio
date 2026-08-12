@@ -27,7 +27,7 @@ export default function Sistemas() {
           </h2>
         </div>
 
-        <ul ref={listRef} className={styles.list} aria-label="tipos de sistemas">
+        <ul ref={listRef} className={styles.list} aria-label="capacidades y ciclo de desarrollo">
           {t.sistemas.items.map((item, i) => (
             <li
               key={item.label}
