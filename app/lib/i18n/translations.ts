@@ -168,13 +168,13 @@ export const translations = {
       btn: 'Enviar mensaje',
       sending: 'Enviando…',
       success: '¡Mensaje enviado! Me pondré en contacto a la brevedad.',
-      error: 'Algo salió mal. Escribime directamente a ana@suarez.dev',
+      error: 'Algo salió mal. Escribime directamente a luigijose.gutierrez@gmail.com',
     },
     footer: {
       copy: '© 2026 Ana Suárez · Ingeniería de Sistemas',
       links: [
-        { label: 'GitHub',   href: 'https://github.com' },
-        { label: 'LinkedIn', href: 'https://linkedin.com' },
+        { label: 'GitHub',   href: 'https://github.com/suarezana9' },
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anasuarezsuarez' },
       ],
     },
   },
@@ -346,15 +346,16 @@ export const translations = {
       btn: 'Send message',
       sending: 'Sending…',
       success: 'Message sent! I will get back to you shortly.',
-      error: 'Something went wrong. Write me directly at ana@suarez.dev',
+      error: 'Something went wrong. Write me directly at luigijose.gutierrez@gmail.com',
     },
     footer: {
       copy: '© 2026 Ana Suárez · Systems Engineering',
       links: [
-        { label: 'GitHub',   href: 'https://github.com' },
-        { label: 'LinkedIn', href: 'https://linkedin.com' },
+        { label: 'GitHub',   href: 'https://github.com/suarezana9' },
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anasuarezsuarez' },
       ],
     },
   },
 } as const
+
 
