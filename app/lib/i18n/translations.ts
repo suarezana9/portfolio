@@ -129,6 +129,28 @@ export const translations = {
         },
       ],
     },
+    proceso: {
+      kicker: 'cómo trabajo',
+      titleLine1: 'Del problema',
+      titleLine2: 'al sistema.',
+      steps: [
+        {
+          num: '01',
+          title: 'Diagnóstico',
+          desc: 'Me contás el problema o la idea. Hablo tanto con perfiles técnicos como con dueños de negocio — no hace falta que sepas de tecnología para explicarme qué necesitás.',
+        },
+        {
+          num: '02',
+          title: 'Propuesta & Arquitectura',
+          desc: 'Diseño la solución: qué sistema construir, con qué tecnología y en cuánto tiempo. Te presento un plan claro con alcance definido y sin sorpresas.',
+        },
+        {
+          num: '03',
+          title: 'Desarrollo & Entrega',
+          desc: 'Construyo de forma iterativa con revisiones frecuentes. Entrego código limpio, documentado y corriendo en producción — y me quedo disponible para el soporte post-lanzamiento.',
+        },
+      ],
+    },
     contacto: {
       kicker: 'contacto',
       titleLine1: '¿Tenés un proyecto',
@@ -276,6 +298,28 @@ export const translations = {
           role: 'IoT Platform Software Developer',
           company: 'Multi-tenant IoT Platform',
           desc: 'Led the complete lifecycle: from requirements gathering and multi-tenant architecture to real-time dashboards and analytics reporting.',
+        },
+      ],
+    },
+    proceso: {
+      kicker: 'how I work',
+      titleLine1: 'From problem',
+      titleLine2: 'to system.',
+      steps: [
+        {
+          num: '01',
+          title: 'Discovery',
+          desc: "Tell me about the problem or idea. I work with both technical profiles and business owners — you don't need to know technology to explain what you need.",
+        },
+        {
+          num: '02',
+          title: 'Proposal & Architecture',
+          desc: 'I design the solution: what system to build, which technology to use, and how long it will take. You get a clear plan with a defined scope and no surprises.',
+        },
+        {
+          num: '03',
+          title: 'Development & Delivery',
+          desc: 'I build iteratively with frequent check-ins. I deliver clean, documented code running in production — and stay available for post-launch support.',
         },
       ],
     },

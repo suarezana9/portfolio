@@ -10,8 +10,8 @@ function WallitMockup() {
       <div className={styles.phoneNotch} />
       <div className={styles.phoneScreen}>
         <div className={styles.phoneHeader}>
-          <span className={styles.phoneLabel}>Balance total</span>
-          <span className={styles.phoneBalance}>$ 24.850</span>
+          <span className={styles.phoneLabel}>Total balance</span>
+          <span className={styles.phoneBalance}>$ 4,250</span>
         </div>
         <div className={styles.phoneChart}>
           {[38, 55, 72, 48, 88, 64, 95].map((h, i) => (
@@ -24,9 +24,9 @@ function WallitMockup() {
         </div>
         <div className={styles.phoneTxList}>
           {[
-            { label: 'Supermercado', amount: '−$3.200', neg: true },
-            { label: 'Sueldo',       amount: '+$85.000', neg: false },
-            { label: 'Netflix',      amount: '−$1.500', neg: true },
+            { label: 'Groceries',    amount: '−$84.00',  neg: true  },
+            { label: 'Salary',       amount: '+$2,400',  neg: false },
+            { label: 'Streaming',    amount: '−$15.99',  neg: true  },
           ].map(tx => (
             <div key={tx.label} className={styles.phoneTx}>
               <span className={styles.phoneTxLabel}>{tx.label}</span>
