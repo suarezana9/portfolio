@@ -1,4 +1,4 @@
-export type Lang = 'es' | 'en'
+﻿export type Lang = 'es' | 'en'
 
 export const translations = {
   es: {
@@ -31,7 +31,7 @@ export const translations = {
           title: 'Ciclo completo',
           accent: 'End-to-End',
           desc: 'Aporto visión integral en todas las etapas de un sistema: relevamiento de requerimientos, diseño de arquitectura, desarrollo, pruebas y despliegue en producción. Mi trabajo abarca mucho más que solo escribir código.',
-          tags: ['TypeScript', 'React', 'Next.js', 'Node.js', 'REST APIs', 'PostgreSQL'],
+          tags: ['TypeScript', 'React', 'Node.js', 'REST APIs'],
         },
         {
           num: '02',
@@ -56,11 +56,11 @@ export const translations = {
       groups: [
         {
           label: 'Frontend',
-          items: ['Angular', 'React', 'Next.js', 'TypeScript', 'CSS Modules'],
+          items: ['Angular', 'React', 'TypeScript', 'CSS Modules'],
         },
         {
           label: 'Backend',
-          items: ['Node.js', 'REST APIs', 'Express', 'Arquitectura Multi-tenant'],
+          items: ['Node.js', 'REST APIs', 'Arquitectura Multi-tenant'],
         },
         {
           label: 'Mobile',
@@ -68,7 +68,7 @@ export const translations = {
         },
         {
           label: 'Datos & Cloud',
-          items: ['Firebase', 'Supabase', 'PostgreSQL', 'MQTT'],
+          items: ['Firebase', 'Supabase', 'MQTT'],
         },
         {
           label: 'Agentes LLM',
@@ -105,7 +105,7 @@ export const translations = {
         {
           name: 'Plataforma Multi-tenant IoT',
           desc: 'Plataforma empresarial de gestión de dispositivos IoT con monitoreo en tiempo real, dashboards interactivos, reporte de métricas y alertas configurables.',
-          tags: ['Angular', 'Ionic', 'MQTT', 'Node.js', 'PostgreSQL'],
+          tags: ['Angular', 'Ionic', 'MQTT', 'Node.js'],
           theme: 'stock',
         },
       ],
@@ -209,7 +209,7 @@ export const translations = {
           title: 'Full Lifecycle',
           accent: 'End-to-End',
           desc: 'I bring a comprehensive vision across all stages of a system: requirements gathering, architecture design, development, testing, and production deployment. My work goes far beyond writing code.',
-          tags: ['TypeScript', 'React', 'Next.js', 'Node.js', 'REST APIs', 'PostgreSQL'],
+          tags: ['TypeScript', 'React', 'Node.js', 'REST APIs'],
         },
         {
           num: '02',
@@ -234,11 +234,11 @@ export const translations = {
       groups: [
         {
           label: 'Frontend',
-          items: ['Angular', 'React', 'Next.js', 'TypeScript', 'CSS Modules'],
+          items: ['Angular', 'React', 'TypeScript', 'CSS Modules'],
         },
         {
           label: 'Backend',
-          items: ['Node.js', 'REST APIs', 'Express', 'Multi-tenant Architecture'],
+          items: ['Node.js', 'REST APIs', 'Multi-tenant Architecture'],
         },
         {
           label: 'Mobile',
@@ -246,7 +246,7 @@ export const translations = {
         },
         {
           label: 'Data & Cloud',
-          items: ['Firebase', 'Supabase', 'PostgreSQL', 'MQTT'],
+          items: ['Firebase', 'Supabase', 'MQTT'],
         },
         {
           label: 'LLM Agents',
@@ -283,7 +283,7 @@ export const translations = {
         {
           name: 'Multi-tenant IoT Platform',
           desc: 'Enterprise IoT device management platform featuring real-time monitoring, interactive dashboards, metric reporting, and custom alerts.',
-          tags: ['Angular', 'Ionic', 'MQTT', 'Node.js', 'PostgreSQL'],
+          tags: ['Angular', 'Ionic', 'MQTT', 'Node.js'],
           theme: 'stock',
         },
       ],
@@ -357,3 +357,4 @@ export const translations = {
     },
   },
 } as const
+
