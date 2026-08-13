@@ -129,6 +129,12 @@ export const translations = {
         },
       ],
     },
+    stats: [
+      { value: '+8',  label: 'años de experiencia' },
+      { value: '+20', label: 'proyectos entregados' },
+      { value: '3',   label: 'industrias: fintech, IoT, e-commerce' },
+      { value: '100%', label: 'remoto y disponible' },
+    ],
     proceso: {
       kicker: 'cómo trabajo',
       titleLine1: 'Del problema',
@@ -301,6 +307,12 @@ export const translations = {
         },
       ],
     },
+    stats: [
+      { value: '+8',   label: 'years of experience' },
+      { value: '+20',  label: 'projects delivered' },
+      { value: '3',    label: 'industries: fintech, IoT, e-commerce' },
+      { value: '100%', label: 'remote & available' },
+    ],
     proceso: {
       kicker: 'how I work',
       titleLine1: 'From problem',

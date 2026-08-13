@@ -69,9 +69,7 @@ export default function Expertise() {
               </div>
 
               <div className={styles.cardBody}>
-                <span className={styles.codeTag}>&lt;h3&gt;</span>
                 <p className={styles.cardDesc}>{card.desc}</p>
-                <span className={styles.codeTag}>&lt;/h3&gt;</span>
               </div>
             </article>
           ))}

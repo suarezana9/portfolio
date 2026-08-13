@@ -1,5 +1,6 @@
 import Nav         from './components/nav/Nav'
 import Hero        from './components/hero/Hero'
+import Stats       from './components/stats/Stats'
 import Expertise   from './components/expertise/Expertise'
 import Sistemas    from './components/sistemas/Sistemas'
 import Proyectos   from './components/proyectos/Proyectos'
@@ -15,6 +16,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Stats />
         <Expertise />
         <Sistemas />
         <Proyectos />
