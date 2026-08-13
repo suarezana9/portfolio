@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <LanguageProvider>
           <Cursor />
           {children}
