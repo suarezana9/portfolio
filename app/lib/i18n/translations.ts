@@ -168,7 +168,7 @@ export const translations = {
       btn: 'Enviar mensaje',
       sending: 'Enviando…',
       success: '¡Mensaje enviado! Me pondré en contacto a la brevedad.',
-      error: 'Algo salió mal. Escribime directamente a luigijose.gutierrez@gmail.com',
+      error: 'Algo salió mal. Escribime directamente a suarezsuarezana20@gmail.com',
     },
     footer: {
       copy: '© 2026 Ana Suárez · Ingeniería de Sistemas',
@@ -346,7 +346,7 @@ export const translations = {
       btn: 'Send message',
       sending: 'Sending…',
       success: 'Message sent! I will get back to you shortly.',
-      error: 'Something went wrong. Write me directly at luigijose.gutierrez@gmail.com',
+      error: 'Something went wrong. Write me directly at suarezsuarezana20@gmail.com',
     },
     footer: {
       copy: '© 2026 Ana Suárez · Systems Engineering',
@@ -357,5 +357,6 @@ export const translations = {
     },
   },
 } as const
+
 
 
