@@ -4,13 +4,13 @@ import Cursor from './components/cursor/Cursor'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ana Suárez — Ingeniería de Sistemas a medida',
+  title: 'Ana Suárez — Software Developer',
   description:
-    'Ingeniera de sistemas con 8 años de experiencia. Diseño y desarrollo sistemas digitales que automatizan, ordenan y hacen crecer empresas reales.',
-  keywords: ['ingeniería de sistemas', 'desarrollo de software', 'freelance', 'sistemas a medida', 'TypeScript', 'Angular', 'React', 'mobile'],
+    'Software Developer con +8 años en el ciclo completo de desarrollo. Especializada en arquitectura, web, mobile y uso estratégico de IA para acelerar la ejecución sin perder criterio técnico.',
+  keywords: ['software developer', 'ingeniería de sistemas', 'desarrollo web', 'mobile', 'TypeScript', 'Angular', 'React', 'arquitectura', 'IA', 'remoto'],
   openGraph: {
-    title: 'Ana Suárez — Ingeniería de Sistemas',
-    description: 'Sistemas digitales que hacen crecer negocios reales.',
+    title: 'Ana Suárez — Software Developer',
+    description: 'Ciclo completo: relevamiento, arquitectura, desarrollo, testing y deploy. +8 años de experiencia.',
     type: 'website',
   },
 }

@@ -361,6 +361,90 @@
   letter-spacing: 0.02em;
 }
 
+/* ── Sushi mockup ───────────────────────────── */
+.sushiScreen {
+  background: #0d1208;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sushiHero {
+  background: linear-gradient(135deg, #1a2a10 0%, #0d1208 100%);
+  padding: 16px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-bottom: 1px solid rgba(176,185,168,0.08);
+}
+
+.sushiLogo {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--warm, #dcb482);
+  letter-spacing: 0.02em;
+}
+
+.sushiSub {
+  font-size: 8px;
+  color: rgba(255,255,255,0.3);
+  font-family: var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sushiCats {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+
+.sushiCat {
+  font-size: 8px;
+  font-family: var(--sans);
+  color: rgba(255,255,255,0.3);
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  white-space: nowrap;
+}
+
+.sushiCatActive {
+  color: var(--warm, #dcb482);
+  border-color: rgba(220,180,130,0.3);
+  background: rgba(220,180,130,0.06);
+}
+
+.sushiItems {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 14px 14px;
+  gap: 2px;
+}
+
+.sushiItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.sushiItemName {
+  font-size: 9px;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--sans);
+}
+
+.sushiItemPrice {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--warm, #dcb482);
+  font-family: var(--sans);
+}
+
 /* ── Responsive ───────────────────────────── */
 @media (max-width: 900px) {
   .card, .cardReverse { grid-template-columns: 1fr; direction: ltr; }

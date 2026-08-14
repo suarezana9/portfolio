@@ -78,11 +78,50 @@ function IoTMockup() {
   )
 }
 
+function SushiMockup() {
+  const categories = ['Temakis', 'Rolls', 'Entradas', 'Bebidas']
+  const items = [
+    { name: 'Philadelphia Roll', price: '$8.50' },
+    { name: 'Salmón Temaki',     price: '$6.00' },
+    { name: 'Gyozas',            price: '$5.50' },
+  ]
+  return (
+    <div className={styles.browser}>
+      <div className={styles.browserBar}>
+        <span className={styles.browserDot} />
+        <span className={styles.browserDot} />
+        <span className={styles.browserDot} />
+        <span className={styles.browserUrl}>tempo-sushi.vercel.app</span>
+      </div>
+      <div className={`${styles.browserScreen} ${styles.sushiScreen}`}>
+        <div className={styles.sushiHero}>
+          <span className={styles.sushiLogo}>Tempo Sushi</span>
+          <span className={styles.sushiSub}>Delivery · CABA</span>
+        </div>
+        <div className={styles.sushiCats}>
+          {categories.map((c, i) => (
+            <span key={c} className={`${styles.sushiCat} ${i === 0 ? styles.sushiCatActive : ''}`}>{c}</span>
+          ))}
+        </div>
+        <div className={styles.sushiItems}>
+          {items.map(item => (
+            <div key={item.name} className={styles.sushiItem}>
+              <span className={styles.sushiItemName}>{item.name}</span>
+              <span className={styles.sushiItemPrice}>{item.price}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function Proyectos() {
   const { t } = useLang()
   const headingRef = useReveal<HTMLDivElement>()
   const card1Ref   = useReveal<HTMLElement>(0.08)
   const card2Ref   = useReveal<HTMLElement>(0.08)
+  const card3Ref   = useReveal<HTMLElement>(0.08)
 
   const projects = t.proyectos.items
 
@@ -135,6 +174,23 @@ export default function Proyectos() {
           </div>
           <div className={styles.cardMockup}>
             <IoTMockup />
+          </div>
+        </article>
+
+        {/* Card 3 — Tempo Sushi */}
+        <article ref={card3Ref} className={styles.card}>
+          <div className={styles.cardMockup}>
+            <SushiMockup />
+          </div>
+          <div className={styles.cardBody}>
+            <span className={styles.cardNum}>03</span>
+            <h3 className={styles.cardName}>{projects[2].name}</h3>
+            <p className={styles.cardDesc}>{projects[2].desc}</p>
+            <ul className={styles.tags}>
+              {projects[2].tags.map(tag => (
+                <li key={tag} className={styles.tag}>{tag}</li>
+              ))}
+            </ul>
           </div>
         </article>
 
